@@ -193,12 +193,13 @@ class CycleGANModel(BaseModel):
         if self.opt.identity > 0.0:
             idt_A = util.tensor2im(self.idt_A.data)
             idt_B = util.tensor2im(self.idt_B.data)
+
             return OrderedDict([('real_A', real_A), ('fake_B', fake_B), ('rec_A', rec_A), ('idt_B', idt_B),
                                 ('real_B', real_B), ('fake_A', fake_A), ('rec_B', rec_B), ('idt_A', idt_A)])
         else:
-            return OrderedDict([('real_A', real_A), ('fake_B', fake_B), ('rec_A', rec_A),
-                                ('real_B', real_B), ('fake_A', fake_A), ('rec_B', rec_B)])
-
+            # return OrderedDict([('real_A', real_A), ('fake_B', fake_B), ('rec_A', rec_A),
+            #                     ('real_B', real_B), ('fake_A', fake_A), ('rec_B', rec_B)])
+            return OrderedDict([('fake_A', fake_A)])
     def save(self, label):
         self.save_network(self.netG_A, 'G_A', label, self.gpu_ids)
         self.save_network(self.netD_A, 'D_A', label, self.gpu_ids)
