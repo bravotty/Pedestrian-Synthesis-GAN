@@ -79,8 +79,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.train" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.train" />
     </list>
     <recent_temporary>
       <list>
@@ -99,6 +99,7 @@
       <updated>1605013050157</updated>
       <workItem from="1605013051212" duration="28401000" />
       <workItem from="1605359639337" duration="3830000" />
+      <workItem from="1605755242449" duration="4000" />
     </task>
     <servers />
   </component>
